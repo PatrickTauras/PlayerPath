@@ -1,5 +1,24 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  font-family: 'Roboto', sans-serif; /* Ensure the whole app uses Roboto */
+}
+
+html, body, #root {
+  height: 100%;
+}
+
 .App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   text-align: center;
+}
+
+.mainContent {
+  flex: 1;
 }
 
 .App-logo {
