@@ -41,7 +41,8 @@ const PlayerData = ({ updateStats, selectedDate }) => {
                          : formattedDate;
 
       try {
-        const response = await fetch('/data/players.json');
+        // Ensure the correct relative path to the players.json file
+        const response = await fetch(process.env.PUBLIC_URL + '/data/players.json');
         const data = await response.json();
         setPlayers(data);
 
