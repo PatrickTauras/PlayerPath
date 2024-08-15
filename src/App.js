@@ -9,7 +9,7 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/PlayerPath-Deployment" element={<GamePage />} /> {/* Set GamePage as the default route */}
+        <Route path="/PlayerPath_App" element={<GamePage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="*" element={<NoPage />} /> {/* Optional: Handle non-existing routes */}
