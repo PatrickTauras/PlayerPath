@@ -17,9 +17,9 @@ Guess the NBA player by identifying the teams they have played for throughout th
 - You only get 8 guesses to correctly identify the player. If you run out of guesses, the game ends.
 - Use the provided hints or toggle switches if you’re having trouble figuring out the player.
 
-### Example:
+### Example: LeBron James
 - Suppose the game starts with the team logos of the Cleveland Cavaliers (the first team) and the Los Angeles Lakers (the last team).
-- You guess “LeBron James”, and if the guess is incorrect, the game reveals the next team he played for, the Miami Heat.
+- You guess a player, but if the guess is incorrect, the game reveals the next team LeBron James played for, the Miami Heat.
 - The sequence continues, revealing more teams with each guess, until you either correctly identify the player or use up all 8 guesses.
 
 ## Features
