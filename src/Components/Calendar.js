@@ -1,53 +1,49 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarAlt, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import styles from './Calendar.module.css';
 
-// Exported function to get the corrected today date
-export const getCorrectedTodayDate = () => {
-  const today = new Date();
-  return today;
-};
-
-const Calendar = ({ onSelectDate, firstGameDate }) => {
+const Calendar = ({ onSelectDate }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
   const [selectedMonth, setSelectedMonth] = useState(new Date().getMonth());
+
+  useEffect(() => {
+    // Automatically set the month to August if not already set
+    if (selectedMonth !== 7) { // 7 is August (0-indexed)
+      setSelectedMonth(7);
+    }
+  }, [selectedMonth]);
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
   };
 
   const handleYearChange = (direction) => {
-    const newYear = selectedYear + direction;
-    if (newYear <= new Date().getFullYear()) {
-      setSelectedYear(newYear);
-    }
+    setSelectedYear(selectedYear + direction);
   };
 
   const handleMonthChange = (month) => {
-    const today = getCorrectedTodayDate(); // Use the exported date function
-    if (selectedYear === today.getFullYear() && month > today.getMonth()) {
-      return; // Don't allow future months
-    }
-    if (new Date(selectedYear, month, 1) >= new Date(firstGameDate)) {
-      setSelectedMonth(month);
-    }
+    setSelectedMonth(month);
   };
 
   const handleDateSelect = (day) => {
-    const today = getCorrectedTodayDate(); // Use the exported date function
     const selectedDate = new Date(selectedYear, selectedMonth, day);
-
-    if (selectedDate <= today && selectedDate >= new Date(firstGameDate)) {
-      onSelectDate(selectedDate);
-      setIsModalOpen(false);
-    }
+    onSelectDate(selectedDate);
+    setIsModalOpen(false); // Close the calendar modal
   };
+
+  const today = new Date();
+  const startDate = new Date(2024, 7, 10); // Allow dates starting from 8/10/2024
+  const endDate = today; // Allow dates up to today
 
   const daysInMonth = new Date(selectedYear, selectedMonth + 1, 0).getDate();
   const daysArray = Array.from({ length: daysInMonth }, (_, i) => i + 1);
-  const today = getCorrectedTodayDate(); // Use the exported date function
+
+  const isDateSelectable = (day) => {
+    const dateToCheck = new Date(selectedYear, selectedMonth, day);
+    return dateToCheck >= startDate && dateToCheck <= endDate;
+  };
 
   return (
     <div className={styles.calendarContainer}>
@@ -61,9 +57,7 @@ const Calendar = ({ onSelectDate, firstGameDate }) => {
             <div className={styles.header}>
               <FontAwesomeIcon icon={faChevronLeft} onClick={() => handleYearChange(-1)} className={styles.navIcon} />
               <span className={styles.year}>{selectedYear}</span>
-              {selectedYear < today.getFullYear() && (
-                <FontAwesomeIcon icon={faChevronRight} onClick={() => handleYearChange(1)} className={styles.navIcon} />
-              )}
+              <FontAwesomeIcon icon={faChevronRight} onClick={() => handleYearChange(1)} className={styles.navIcon} />
             </div>
             <div className={styles.divider}></div>
             <div className={styles.months}>
@@ -72,14 +66,6 @@ const Calendar = ({ onSelectDate, firstGameDate }) => {
                   key={index}
                   className={`${styles.month} ${index === selectedMonth ? styles.selectedMonth : ''}`}
                   onClick={() => handleMonthChange(index)}
-                  style={{
-                    cursor: (selectedYear === today.getFullYear() && index > today.getMonth()) ||
-                            (new Date(selectedYear, index, 1) < new Date(firstGameDate))
-                            ? 'not-allowed' : 'pointer',
-                    color: (selectedYear === today.getFullYear() && index > today.getMonth()) ||
-                           (new Date(selectedYear, index, 1) < new Date(firstGameDate))
-                           ? 'gray' : 'black'
-                  }}
                 >
                   {month}
                 </div>
@@ -90,16 +76,8 @@ const Calendar = ({ onSelectDate, firstGameDate }) => {
               {daysArray.map(day => (
                 <div 
                   key={day} 
-                  className={`${styles.day} ${today.getFullYear() === selectedYear && today.getMonth() === selectedMonth && today.getDate() === day ? styles.today : ''}`} 
-                  onClick={() => handleDateSelect(day)}
-                  style={{
-                    cursor: new Date(selectedYear, selectedMonth, day) > today ||
-                            new Date(selectedYear, selectedMonth, day) < new Date(firstGameDate)
-                            ? 'not-allowed' : 'pointer',
-                    color: new Date(selectedYear, selectedMonth, day) > today ||
-                           new Date(selectedYear, selectedMonth, day) < new Date(firstGameDate)
-                           ? 'gray' : 'black'
-                  }}
+                  className={`${styles.day} ${isDateSelectable(day) ? '' : styles.disabledDay}`} 
+                  onClick={() => isDateSelectable(day) && handleDateSelect(day)}
                 >
                   {day}
                 </div>

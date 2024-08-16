@@ -1,139 +1,148 @@
 .calendarContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 0px;
-  margin-top: 10px;
-}
-
-.icon {
-  background-color: orange;
-  color: white;
-  border: 2px solid orange;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-left: 10px;
-  margin-top: 10px;
-}
-
-.calendarIcon {
-  font-size: 1.7rem;
-}
-
-.icon:hover {
-  background-color: rgb(254, 182, 47);
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.75);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-}
-
-.modal {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  padding: 20px;
-  width: 80%;
-  max-width: 400px;
-  text-align: center;
-  position: relative;
-  z-index: 1000;
-}
-
-.closeButton {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-.closeButton:focus {
-  outline: none;
-}
-
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-
-.navIcon {
-  cursor: pointer;
-  margin: 0 10px;
-}
-
-.year {
-  font-size: 1.5rem;
-}
-
-.divider {
-  height: 1px;
-  background-color: #ccc;
-  margin: 10px 0;
-}
-
-.months {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-
-.month {
-  width: 50px;
-  padding: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.selectedMonth {
-  background-color: #007bff;
-  color: white;
-  border-radius: 5px;
-}
-
-.month:hover {
-  background-color: #f0f0f0;
-}
-
-.days {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.day {
-  width: 30px;
-  padding: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.day:hover {
-  background-color: #f0f0f0;
-}
-
-.today {
-  background-color: #007bff;
-  color: white;
-  border-radius: 5px;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0px;
+    margin-top: 10px;
+  }
+  
+  .icon {
+    background-color: orange;
+    color: white;
+    border: 2px solid orange;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  
+  .calendarIcon {
+    font-size: 1.7rem;
+  }
+  
+  .icon:hover {
+    background-color: rgb(254, 182, 47);
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  
+  .modal {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    z-index: 1000;
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .closeButton:focus {
+    outline: none;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .navIcon {
+    cursor: pointer;
+    margin: 0 10px;
+  }
+  
+  .year {
+    font-size: 1.5rem;
+  }
+  
+  .divider {
+    height: 1px;
+    background-color: #ccc;
+    margin: 10px 0;
+  }
+  
+  .months {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .month {
+    width: 50px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .selectedMonth {
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .month:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .days {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .day {
+    width: 30px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .day:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .today {
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .disabledDay {
+    color: #a0a0a0; /* Lighter grey for text */
+  }
+  
+  .disabledDay:hover {
+    color: #a0a0a0; /* Keep the same lighter grey on hover */
+  }
+  

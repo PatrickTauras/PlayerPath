@@ -1,18 +1,18 @@
 // src/components/AdSenseAd.js
 import React, { useEffect } from 'react';
 
-const AdSenseAd = () => {
+const AdSenseAd = ({ client, slot, format = 'auto', responsive = 'true' }) => {
   useEffect(() => {
     const script = document.createElement('script');
     script.async = true;
     script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
-    script.crossOrigin = 'anonymous';
+    script.setAttribute('data-ad-client', client);
     document.body.appendChild(script);
 
     return () => {
       document.body.removeChild(script);
     };
-  }, []);
+  }, [client]);
 
   useEffect(() => {
     try {
@@ -25,10 +25,10 @@ const AdSenseAd = () => {
   return (
     <ins className="adsbygoogle"
       style={{ display: 'block' }}
-      data-ad-client="ca-pub-6869692723025523"
-      data-ad-slot="5368868717"
-      data-ad-format="auto"
-      data-full-width-responsive="true"></ins>
+      data-ad-client={client}
+      data-ad-slot={slot}
+      data-ad-format={format}
+      data-full-width-responsive={responsive}></ins>
   );
 };
 

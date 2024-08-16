@@ -5,7 +5,7 @@ function TopSection() {
   return (
     <div className={styles.topSection}>
       <div className={styles.logoContainer}>
-        <img src="https://i.ibb.co/nCZNV8r/Player-Path-Logo.webp" alt="PlayerPath Logo" className={styles.logo} />
+        <img src="https://i.postimg.cc/VYXywgg7/Player-Path-Logo.webp" alt="PlayerPath Logo" className={styles.logo} />
         <span className={styles.title}>PlayerPath</span>
       </div>
     </div>

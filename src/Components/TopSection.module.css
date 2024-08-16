@@ -1,29 +1,30 @@
 .topSection {
-  background-color: white;
-  padding: 10px 20px;
-  border-bottom: 2px solid #333;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; /* Center the content horizontally */
-  width: 100%; /* Make the header take the full width of the container */
-  margin-bottom: 20px; /* Add space below the header */
-}
-
-.logoContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: -420px;
-}
-
-.logo {
-  height: 50px;
-  margin-right: 10px;
-}
-
-.title {
-  font-size: 2rem;
-  font-weight: bold;
-  color: black;
-}
+    background-color: white;
+    padding: 10px 20px;
+    border-bottom: 2px solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center the content horizontally */
+    width: 100%; /* Make the header take the full width of the container */
+    margin-bottom: 20px; /* Add space below the header */
+  }
+  
+  .logoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -420px;
+  }
+  
+  .logo {
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+  }
+  

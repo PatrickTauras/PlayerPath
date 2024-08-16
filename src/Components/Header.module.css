@@ -1,0 +1,25 @@
+/* src/Components/Header.module.css */
+
+.header {
+    background-color: white;
+    padding: 10px 20px;
+    border-bottom: 3px solid #007bff;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the content horizontally */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a soft shadow */
+    transform: translateX(-20px); /* Move the header to the left */
+    margin-left: -365px; /* Further adjust the left margin if needed */
+  }
+  
+  .logo {
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
