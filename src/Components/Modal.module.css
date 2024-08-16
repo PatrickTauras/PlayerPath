@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+.Modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 55%; /* Adjust this value to change the width */
+  max-width: 600px; /* Adjust this value to set a maximum width */
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  padding: 20px; /* Adjusted padding */
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  z-index: 1001; /* Ensure modal is above everything else */
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85); /* Darker overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensure overlay covers everything else */
+}
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px 0; /* Added padding for top and bottom */
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 15px; /* Reduced margin */
+}
+
+h3, h4 {
+  margin-top: 15px; /* Reduced margin */
+  margin-bottom: 15px; /* Reduced margin */
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 15px; /* Reduced margin */
+}
+
+.example {
+  margin: 15px 0; /* Reduced margin */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrowContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px; /* Adjust margin for spacing between columns */
+}
+
+.arrow {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.arrowText {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.closeButton:focus {
+  outline: none;
+}
+
+.playButton {
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  margin-top: 15px; /* Reduced margin */
+  font-size: 16px;
+}
+
+.playButton:hover {
+  background-color: #1c88fc;
+}
+
+/* PlayerCard styles specific for the modal */
+.modalCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.modalCard .logoBox {
+  width: 60px; /* Adjust width as needed */
+  height: 60px; /* Adjust height as needed */
+  border: 2px solid #007bff; /* Adjusted border size */
+  padding: 5px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  margin-bottom: 5px; /* Reduced margin */
+}
+
+.modalCard .hiddenLogoBox {
+  width: 60px; /* Same width to maintain box size */
+  height: 60px; /* Same height to maintain box size */
+  border: 2px solid #007bff; /* Visible border */
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  margin-bottom: 5px; /* Reduced margin */
+}
+
+.modalCard .hiddenLogoImage {
+  visibility: hidden;
+}
+
+.modalCard .hiddenTeamName {
+  font-size: 12px;
+  font-weight: bold;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  visibility: hidden;
+}
+
+.modalCard .logoImage {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.modalCard .teamName {
+  font-size: 12px;
+  font-weight: bold;
+  width: 100%;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.hint {
+  margin: 20px 0; /* Add margin above and below the hint */
+  font-size: 14px;
+  font-style: italic;
+  color: #555;
+}

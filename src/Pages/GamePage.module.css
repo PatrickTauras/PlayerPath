@@ -1,0 +1,88 @@
+.gamePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+  }
+  
+  .boxContainer {
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+    margin-bottom: -10px;
+  }
+  
+  .mainContent {
+    margin-top: 10px;
+  }
+  
+  .buttonContainer {
+    position: absolute;
+    top: 10px;
+    right: 530px; /* Adjust this value to position horizontally */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .helpButton {
+    background-color: blue;
+    color: white;
+    border: 2px solid blue;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 19px;
+  }
+  
+  .helpButton:hover {
+    background-color: rgb(68, 68, 252);
+  }
+  
+  .dateAndStats {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    transform: scale(1.4);
+    margin-top: 25px;
+  }
+  
+  .dateComponent {
+    font-size: 20px;
+    display: flex;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: 2px solid #007bff;
+    color: #007bff;
+    margin-right: 10px;
+  }
+  
+  /* Add the new dateTitle class */
+  .dateTitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 20px; /* Add some margin on top for spacing */
+    text-align: center; /* Center align the text */
+    color: #333; /* Change the color to a dark grey */
+  }
+  /* Add the styling for the dateIndicator */
+  .dateIndicator {
+    font-size: 26px; /* Adjust this value to increase or decrease the text size */
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 00px; /* Adjust the margin as needed */
+    text-align: center;
+    color: #151515; /* This sets the text color to dark grey */
+  }

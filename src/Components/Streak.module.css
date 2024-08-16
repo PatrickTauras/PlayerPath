@@ -1,0 +1,16 @@
+/* src/Components/Streak.module.css */
+
+.streakContainer {
+    font-size: 30px;
+    padding: 5px 10px;
+    color: black;
+    border: 2px solid #333; /* Add border styling */
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft box shadow */
+    background-color: white;
+    text-align: center;
+    margin: 0; /* Remove individual margin settings */
+  }
+  
+  
