@@ -27,3 +27,17 @@ Guess the NBA player by identifying the teams they have played for throughout th
 - **Past Games Calendar:** Missed a day? No problem! The game includes a calendar feature that lets you replay previous days’ challenges.
 
 
+## Technologies Used
+- **React.js:** The core framework for building the user interface.
+- **HTML5/CSS3:** For styling and layout.
+- **GitHub Pages:** For deploying the game online.
+- **Node.js & npm:** For managing dependencies and building the project.
+
+## Contributing
+If you’d like to contribute to PlayerPath, please fork the repository and use a feature branch. Pull requests are warmly welcome.
+
+## License
+This project is open-source and available under the MIT License.
+
+## Contact
+For any inquiries or feedback, please feel free to reach out to the project maintainer at `<your-email@example.com>`.
