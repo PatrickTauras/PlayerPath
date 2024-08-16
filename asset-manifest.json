@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/PlayerPath_App/static/css/main.a65e3c4b.css",
-    "main.js": "/PlayerPath_App/static/js/main.c6ff85d9.js",
-    "index.html": "/PlayerPath_App/index.html",
-    "main.a65e3c4b.css.map": "/PlayerPath_App/static/css/main.a65e3c4b.css.map",
-    "main.c6ff85d9.js.map": "/PlayerPath_App/static/js/main.c6ff85d9.js.map"
+    "main.css": "/PlayerPath/static/css/main.a65e3c4b.css",
+    "main.js": "/PlayerPath/static/js/main.04e21837.js",
+    "index.html": "/PlayerPath/index.html",
+    "main.a65e3c4b.css.map": "/PlayerPath/static/css/main.a65e3c4b.css.map",
+    "main.04e21837.js.map": "/PlayerPath/static/js/main.04e21837.js.map"
   },
   "entrypoints": [
     "static/css/main.a65e3c4b.css",
-    "static/js/main.c6ff85d9.js"
+    "static/js/main.04e21837.js"
   ]
 }
