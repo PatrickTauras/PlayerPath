@@ -1,4 +1,4 @@
-# PlayerPath
+# PlayerPath (LINK IN THE ABOUT SECTION!!)
 
 ## Overview
 PlayerPath is an exciting daily game that blends the thrill of basketball with the challenge of puzzle-solving, inspired by popular games like The New York Times' 'Wordle' and 'Connections'. It’s designed specifically for basketball enthusiasts who love the NBA and enjoy testing their knowledge of players' career paths.
