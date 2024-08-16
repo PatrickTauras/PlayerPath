@@ -26,12 +26,4 @@ Guess the NBA player by identifying the teams they have played for throughout th
 - **Hints and Toggles:** Stuck on a player? Use the hints or toggle switches to reveal more information and guide your guesses.
 - **Past Games Calendar:** Missed a day? No problem! The game includes a calendar feature that lets you replay previous days’ challenges.
 
-## Installation and Setup
 
-### Prerequisites
-- **Node.js:** Ensure you have Node.js installed on your machine. You can download it [here](https://nodejs.org/).
-
-### Clone the Repository
-```bash
-git clone https://github.com/<your-username>/PlayerPath.git
-cd PlayerPath
