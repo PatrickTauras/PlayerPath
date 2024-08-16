@@ -34,9 +34,6 @@ Guess the NBA player by identifying the teams they have played for throughout th
 - **GitHub Pages:** For deploying the game online.
 - **Node.js & npm:** For managing dependencies and building the project.
 
-## Contributing
-If you’d like to contribute to PlayerPath, Please reach out to me through the contact page.
-
 ## License
 This project is open-source and available under the MIT License.
 
