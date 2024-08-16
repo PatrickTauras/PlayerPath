@@ -34,10 +34,10 @@ Guess the NBA player by identifying the teams they have played for throughout th
 - **Node.js & npm:** For managing dependencies and building the project.
 
 ## Contributing
-If you’d like to contribute to PlayerPath, please fork the repository and use a feature branch. Pull requests are warmly welcome.
+If you’d like to contribute to PlayerPath, Please reach out to me through the contact page. 
 
 ## License
 This project is open-source and available under the MIT License.
 
 ## Contact
-For any inquiries or feedback, please feel free to reach out to the project maintainer at `<your-email@example.com>`.
+For any inquiries or feedback, please feel free to reach out to me through the contact page.
