@@ -11,21 +11,22 @@ In PlayerPath, your task is to guess the **Current or Former NBA player** based 
 Guess the NBA player by identifying the teams they have played for throughout their career. The game will present you with a sequence of team logos, one for each team the player has played for.
 
 ### Gameplay:
-- The game starts with a single team logo, and you must guess the player's name based on this logo.
-- Each correct guess reveals the next team the player played for, continuing until all teams are revealed or the player is correctly identified.
+- At the start of each new day, a new NBA player is featured. The game begins by displaying the first and last teams the player has played for in their career.
+- Your goal is to guess the player's name based on these initial team logos.
+- Each guess reveals the next team the player played for in sequence, continuing until all teams are revealed or the player is correctly identified.
+- You only get 8 guesses to correctly identify the player. If you run out of guesses, the game ends.
 - Use the provided hints or toggle switches if you’re having trouble figuring out the player.
 
 ### Example:
-- The game might start with a team logo of the Cleveland Cavaliers.
-- You guess “LeBron James”, revealing the next team he played for, the Miami Heat.
-- The sequence continues until you either complete all the team logos or correctly identify the player.
+- Suppose the game starts with the team logos of the Cleveland Cavaliers (the first team) and the Los Angeles Lakers (the last team).
+- You guess “LeBron James”, and if the guess is incorrect, the game reveals the next team he played for, the Miami Heat.
+- The sequence continues, revealing more teams with each guess, until you either correctly identify the player or use up all 8 guesses.
 
 ## Features
 - **Daily Challenge:** A new NBA player to guess each day, ensuring the game remains fresh and engaging.
 - **Responsive Design:** The game is designed to work flawlessly across all devices, whether you’re playing on a desktop or a mobile device.
 - **Hints and Toggles:** Stuck on a player? Use the hints or toggle switches to reveal more information and guide your guesses.
 - **Past Games Calendar:** Missed a day? No problem! The game includes a calendar feature that lets you replay previous days’ challenges.
-
 
 ## Technologies Used
 - **React.js:** The core framework for building the user interface.
@@ -34,7 +35,7 @@ Guess the NBA player by identifying the teams they have played for throughout th
 - **Node.js & npm:** For managing dependencies and building the project.
 
 ## Contributing
-If you’d like to contribute to PlayerPath, Please reach out to me through the contact page. 
+If you’d like to contribute to PlayerPath, Please reach out to me through the contact page.
 
 ## License
 This project is open-source and available under the MIT License.
